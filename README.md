@@ -17,6 +17,15 @@ python main.py
 2. Select your recongnizer of choice and wait for opencv window to show up
 3. Press d to exit the application
 
+
+## Notable requirments
+
+opencv
+pytorch
+facenet-pytorch 
+numpy
+pillow
+
 ## Sources
 
 Some sources used are listed below:

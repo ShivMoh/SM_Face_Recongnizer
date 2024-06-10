@@ -46,7 +46,7 @@ class Haarclassifier(Recongnizer):
         recognizer = cv.face.LBPHFaceRecognizer_create()
         recognizer.train(faces, np.array(ids))
 
-        if not os.path.exists("/train"):
+        if not os.path.exists("train"):
             os.mkdir("train")
             f = open("train/train.yml", "w")
             f.close()
