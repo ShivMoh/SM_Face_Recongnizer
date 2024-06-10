@@ -15,7 +15,8 @@ class Haarclassifier(Recongnizer):
         super().__init__()
         self.recognizer = cv.face.LBPHFaceRecognizer_create()
         self.names = os.listdir('users')
-        self.recognizer.read('train/train.yml')
+        self.train()
+        # self.recognizer.read('train/train.yml')
 
     def predict_class(self, image):
        
@@ -29,7 +30,7 @@ class Haarclassifier(Recongnizer):
         return [user_id, confidence]
 
     def train(self):
-  
+        print("Training")
         faces = []
         ids = []
 
@@ -44,6 +45,10 @@ class Haarclassifier(Recongnizer):
                     ids.append(id)
         recognizer = cv.face.LBPHFaceRecognizer_create()
         recognizer.train(faces, np.array(ids))
+
+        if not os.path.exists("/train"):
+            os.mkdir("train")
+            f = open("train/train.yml", "w")
 
         recognizer.write('train/train.yml')
         self.recognizer.read('train/train.yml')
