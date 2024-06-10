@@ -49,6 +49,7 @@ class Haarclassifier(Recongnizer):
         if not os.path.exists("/train"):
             os.mkdir("train")
             f = open("train/train.yml", "w")
+            f.close()
 
         recognizer.write('train/train.yml')
         self.recognizer.read('train/train.yml')
