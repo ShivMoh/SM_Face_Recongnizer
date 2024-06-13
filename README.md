@@ -12,7 +12,9 @@ In the future, will likely look into and implement more methods for face detecti
 cd folder_name
 python main.py
 ```
-
+```
+pip install -r requirements.txt
+```
 1. Type y if new user to collect data for training and wait until data collection is complete
 2. Select your recongnizer of choice and wait for opencv window to show up
 3. Press d to exit the application

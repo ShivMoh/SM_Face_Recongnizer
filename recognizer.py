@@ -8,3 +8,5 @@ class Recongnizer:
 
     def train(self):
         pass
+
+    

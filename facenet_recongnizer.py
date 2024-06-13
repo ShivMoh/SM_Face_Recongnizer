@@ -3,7 +3,6 @@ import torch
 from torch.utils.data import DataLoader
 from torchvision import datasets
 import numpy as np
-import pandas as pd
 import os
 from PIL import Image
 from recognizer import Recongnizer
